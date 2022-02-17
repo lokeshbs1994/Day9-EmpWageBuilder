@@ -10,10 +10,11 @@ public class EmpWageBuilderOOPS {
     public static void main(String[] args) {
         System.out.println("Welcome To Employee Wage builder Using OOPS concepts");
         EmpWageBuilderOOPS empWageBuilderOOPS = new EmpWageBuilderOOPS();
-        empWageBuilderOOPS.computeWage(20, 20, 100);
+        empWageBuilderOOPS.computeWage("AMAZON", 20, 20, 100);
+        empWageBuilderOOPS.computeWage("FLIPCART", 10, 15, 100);
     }
 
-    public void computeWage(int empRatePerHour, int numberOfWorkingDays, int maxHrs) {
+    public void computeWage(String company, int empRatePerHour, int numberOfWorkingDays, int maxHrs) {
         this.EMP_RATE_PER_HOUR = empRatePerHour;
         this.NUM_OF_WORKING_DAYS = numberOfWorkingDays;
         this.MAX_HRS_IN_MONTH = maxHrs;
@@ -41,6 +42,6 @@ public class EmpWageBuilderOOPS {
             totalEmpWage += empWage;
         }
         totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-        System.out.println("Total Emp Wage: " + totalEmpWage);
+        System.out.println("Total Emp Wage of an employee in " + company + " is " + totalEmpWage);
     }
 }
